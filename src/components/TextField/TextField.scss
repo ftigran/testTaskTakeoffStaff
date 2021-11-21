@@ -1,0 +1,137 @@
+.qq {
+  margin: 15px;
+}
+
+.MuiTextField-root {
+  width: 100%;
+  min-height: 99px;
+  max-width: 554px;
+  .MuiInputBase-input.MuiOutlinedInput-input {
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px white inset !important;
+    }
+  }
+  .MuiFormHelperText-root.MuiFormHelperText-contained.Mui-error {
+    font-size: 16px;
+    line-height: 150%;
+    margin-left: 1px;
+    margin-top: 16px;
+  }
+  .MuiOutlinedInput-notchedOutline {
+    border: 1px solid #008f3f;
+    border-radius: 8px;
+    min-height: 73px;
+  }
+  input {
+    padding: 16px 20px;
+  }
+  label,
+  input {
+    font-family: "Neo Sans Weleda";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 150%;
+    top: -3px;
+    left: 6px;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.25);
+    &.Mui-focused {
+      color: rgba(0, 0, 0, 0.25);
+      &.Mui-error {
+        font-family: Neo Sans Weleda;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 150%;
+        color: #f05a29;
+      }
+    }
+    &.Mui-error {
+      color: rgba(0, 0, 0, 0.25);
+    }
+  }
+  .PrivateNotchedOutline-legendLabelled-7 {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  .MuiInputLabel-outlined.MuiInputLabel-shrink {
+    transform: translate(3px, -10px);
+    font-size: 16px;
+    line-height: 150%;
+    padding-right: 10px;
+    background: #fff;
+    padding-left: 10px;
+  }
+  .MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline {
+    border: 1px solid #f05a29;
+    &.Mui-error {
+    }
+  }
+  .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border: 1px solid #008f3f;
+  }
+  fieldset {
+    border: none;
+    legend.PrivateNotchedOutline-legendNotched-4 {
+      margin-top: -20px;
+      font-family: Neo Sans Weleda;
+      font-style: normal;
+      font-weight: normal;
+      padding: 0 8px;
+      font-size: 1em;
+      line-height: 150%;
+    }
+  }
+}
+.TextFieldPhone {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 730px) {
+  .MuiTextField-root {
+    min-height: 39px;
+    max-width: 250px;
+    .MuiFormHelperText-root.MuiFormHelperText-contained.Mui-error {
+      font-size: 8px;
+      margin-left: 1px;
+      margin-top: 7px;
+    }
+
+    .MuiOutlinedInput-notchedOutline {
+      border: 1px solid #008f3f;
+      border-radius: 5px;
+      min-height: 34px;
+    }
+    input {
+      padding: 10px 10px;
+    }
+    label,
+    input {
+      font-size: 8px;
+      top: -11px;
+      left: -6px;
+      &.Mui-focused {
+        &.Mui-error {
+          font-size: 8px;
+        }
+      }
+    }
+    .PrivateNotchedOutline-legendLabelled-7 {
+      font-size: 8px;
+    }
+    .MuiInputLabel-outlined.MuiInputLabel-shrink {
+      transform: translate(25px, 4px);
+      font-size: 8px;
+    }
+    fieldset {
+      legend.PrivateNotchedOutline-legendNotched-4 {
+        font-size: 8px;
+      }
+    }
+  }
+}

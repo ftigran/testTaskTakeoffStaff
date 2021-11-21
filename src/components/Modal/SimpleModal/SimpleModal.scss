@@ -1,0 +1,40 @@
+.SimpleModal {
+  text-align: center;
+  max-width: adaptiv-get(840, 414);
+  .MuiButton-sizeLarge {
+    margin-top: 25px;
+  }
+  &Text {
+    margin: 20px 0;
+    max-width: 510px;
+  }
+
+  &.ModalInsta {
+    p {
+      margin: 0;
+    }
+    p:first-of-type {
+      margin: 20px 0 35ox;
+    }
+    .MuiButton-sizeLarge {
+      margin-top: 37px;
+    }
+    .modalWindowClose {
+      right: 8px;
+      top: 6px;
+    }
+  }
+}
+.react-dadata__suggestions {
+  margin-top: -29px;
+}
+@media (max-width: 400px) {
+  .SimpleModal {
+    .MuiInputBase-root.MuiOutlinedInput-root {
+      max-width: none;
+    }
+    .MuiButtonBase-root.MuiButton-root {
+      min-width: auto;
+    }
+  }
+}

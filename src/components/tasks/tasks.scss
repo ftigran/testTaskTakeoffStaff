@@ -1,0 +1,101 @@
+.tasksContainer {
+  margin-top: 33px;
+  .tasksSendedText {
+    font-size: 24px;
+  }
+  .instaContainer {
+    button.MuiButton-root {
+      height: 70px;
+      margin-top: 2px;
+    }
+    p {
+      font-size: 16px;
+    }
+    .taskInput {
+      padding-top: 2px;
+      padding-right: 20px;
+      width: 100%;
+      .MuiTextField-root label,
+      .MuiTextField-root input {
+        font-size: 24px;
+        line-height: 32px;
+      }
+      .MuiTextField-root {
+        max-width: none;
+      }
+      .MuiFormControl-root.MuiTextField-root.TextFields {
+        min-height: auto;
+      }
+      &Legend {
+        margin-top: 20px;
+        font-family: Neo Sans Weleda;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 150%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .tasksContainer .instaContainer {
+    button.MuiButton-root {
+      height: 50px;
+    }
+    .MuiTextField-root .MuiOutlinedInput-notchedOutline {
+      height: 53px;
+      min-height: auto;
+    }
+    .taskInput {
+      .MuiTextField-root label,
+      .MuiTextField-root input {
+        line-height: 24px;
+      }
+    }
+  }
+}
+@media (max-width: 960px) {
+  .tasksContainer h3 {
+    text-align: center;
+  }
+}
+@media (max-width: 800px) {
+  .tasksContainer .instaContainer {
+    flex-direction: column;
+    align-items: center;
+    .taskInput {
+      padding-right: 0;
+      .MuiTextField-root label,
+      .MuiTextField-root input {
+        line-height: 16px;
+      }
+    }
+    button.MuiButton-root {
+      height: 40px;
+    }
+    p {
+      margin-top: 6px;
+      margin-bottom: 20px;
+    }
+    .MuiTextField-root .MuiOutlinedInput-notchedOutline {
+      height: 43px;
+      min-height: auto;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .tasksContainer .instaContainer {
+    button.MuiButton-root {
+      height: 30px;
+    }
+    p {
+      margin-top: -4px;
+      //margin-bottom: 20px;
+    }
+    .MuiTextField-root .MuiOutlinedInput-notchedOutline {
+      height: 33px;
+      min-height: auto;
+    }
+  }
+}

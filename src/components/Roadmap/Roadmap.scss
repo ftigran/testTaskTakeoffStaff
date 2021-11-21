@@ -1,0 +1,491 @@
+p,
+h3 {
+  margin: 0;
+}
+.RoadmapWrap {
+  background: #fff;
+
+  .RoadmapPromo {
+    display: none;
+  }
+}
+.Roadmap {
+  padding-top: 150px;
+  padding-left: 5px;
+  max-width: 1132px;
+  margin: 0 auto -80px;
+  font-family: "Neo Sans Weleda";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  h3 {
+    font-size: 32px;
+
+    line-height: 48px;
+    margin: 6px 0 10px;
+  }
+
+  &Block {
+    position: relative;
+    &:nth-child(1) {
+      border-bottom: 3px solid #000000;
+      margin-right: 6px;
+      padding-bottom: 91px;
+      padding-left: 51px;
+      position: relative;
+      .imgWrap {
+        img {
+          position: absolute;
+          right: -3px;
+          bottom: -120px;
+        }
+      }
+      .RoadmapNumb {
+        color: rgba(244, 186, 86, 0.25);
+        left: -26px;
+        bottom: -9px;
+        span {
+          left: -13px;
+          bottom: -9px;
+          border-color: #f4ba56;
+          background: rgba(244, 186, 86, 0.5);
+          &::after {
+            left: 7px;
+            top: -120px;
+            height: 99px;
+            border-left: 2px dashed #f4ba56;
+          }
+          &::before {
+            left: 0px;
+            top: -138px;
+            border-color: #f4ba56;
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      border-right: 3px solid #000000;
+      margin: 23px 0 24px;
+      display: grid;
+      grid-template-columns: 5fr 3fr;
+      grid-gap: 20px;
+      align-items: stretch;
+      min-height: 316px;
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        width: 5px;
+        height: 72px;
+        bottom: 34px;
+        right: -4px;
+        z-index: 0;
+      }
+      .RoadmapTextContainer {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        align-self: center;
+        padding-bottom: 17px;
+        p:last-child {
+          font-size: 16px;
+          line-height: 24px;
+          color: rgba(0, 0, 0, 0.25);
+          max-width: 250px;
+        }
+      }
+      .RoadmapImgContainer {
+        grid-area: auto;
+        // background: url("../../img/prizes.png") no-repeat;
+        margin-left: 2%;
+        margin-top: 0.55%;
+        background-size: contain;
+      }
+      .RoadmapNumb {
+        color: rgba(240, 90, 41, 0.25);
+        right: 3px;
+        bottom: 63px;
+        span {
+          right: -18px;
+          bottom: -8px;
+          border-color: #f05a29;
+          background: rgba(240, 90, 41, 0.5);
+          &::after {
+            left: -134px;
+            top: 7px;
+            width: 112px;
+            border-bottom: 2px dashed #f05a29;
+          }
+          &::before {
+            top: 0px;
+            left: -153px;
+            border-color: #f05a29;
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      border-top: 3px solid #000000;
+      margin-right: 3px;
+      padding-top: 12px;
+      padding-left: 55px;
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        width: 87px;
+        height: 5px;
+        top: -4px;
+        left: 54px;
+        z-index: 0;
+      }
+      .RoadmapNumb {
+        color: rgba(0, 171, 136, 0.25);
+        top: -100px;
+        left: -24px;
+        z-index: 1;
+        width: 182px;
+        text-align: center;
+        line-height: 260px;
+
+        span {
+          left: -16px;
+          top: 84px;
+          border-color: #00ab88;
+          background: rgba(0, 171, 136, 0.5);
+          &::after {
+            left: 7px;
+            top: 36px;
+            height: 99px;
+            border-left: 2px dashed #00ab88;
+          }
+          &::before {
+            left: 1px;
+            top: 139px;
+            border-color: #00ab88;
+          }
+        }
+      }
+      .RoadmapImgContainer {
+        margin-top: -75px;
+      }
+    }
+  }
+  &Numb {
+    font-family: "Neo Sans Weleda";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 288px;
+    line-height: 1em;
+    position: absolute;
+
+    span {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border: 8px solid;
+      border-radius: 50%;
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+      }
+
+      &::before {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 2px solid;
+      }
+    }
+  }
+}
+
+@media (max-width: 1450px) {
+  .RoadmapBlock:nth-child(1) {
+    h3,
+    p {
+      max-width: 481px;
+    }
+    .imgWrap {
+      img {
+        right: 30px;
+        bottom: -94px;
+        height: 350px;
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .RoadmapBlock:nth-child(1) {
+    padding-bottom: 33px;
+    h3,
+    p {
+      max-width: 408px;
+    }
+    .imgWrap {
+      img {
+        height: 300px;
+      }
+    }
+  }
+  .RoadmapBlock:nth-child(2) {
+    min-height: 230px;
+    .RoadmapNumb {
+      padding-right: 20px;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .RoadmapBlock:nth-child(2) {
+    position: relative;
+    .RoadmapTextContainer {
+      z-index: 1;
+    }
+    .RoadmapImgContainer {
+      position: absolute;
+      width: 500px;
+      height: 210px;
+      left: -150px;
+      top: 0px;
+    }
+  }
+  .RoadmapBlock:nth-child(3) {
+    .RoadmapNumb {
+      top: -110px;
+    }
+    .RoadmapImgContainer img {
+      width: 350px;
+    }
+  }
+}
+@media (max-width: 875px) {
+  .Roadmap {
+    h3,
+    p {
+      max-width: 250px;
+    }
+    .RoadmapBlock:nth-child(1) {
+      padding-bottom: 40px;
+      h3,
+      p {
+        max-width: 260px;
+      }
+      .imgWrap {
+        img {
+          right: 19px;
+          bottom: -77px;
+          height: 260px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 730px) {
+  .RoadmapWrap {
+    padding-bottom: 45px;
+    overflow: hidden;
+    .RoadmapPromo {
+      position: absolute;
+      display: block;
+      width: 176px;
+      height: 176px;
+      right: -51px;
+      bottom: -9px;
+    }
+  }
+  .Roadmap {
+    margin: 48px 0 0;
+    padding: 0;
+    .RoadmapBlock {
+      border-width: 1px;
+    }
+    .RoadmapBlock:nth-child(1) {
+      padding-left: 30px;
+      padding-bottom: 24px;
+      .imgWrap {
+        img {
+          display: none;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        width: 30px;
+        height: 3px;
+        bottom: -2px;
+        left: 0px;
+        z-index: 0;
+      }
+      .RoadmapNumb {
+        bottom: 45px;
+        left: 4px;
+        span {
+          bottom: -61px;
+          &::before {
+            top: -99px;
+            height: 13px;
+            width: 13px;
+            left: -1px;
+          }
+          &::after {
+            height: 55px;
+            top: -77px;
+          }
+        }
+      }
+    }
+  }
+  .RoadmapBlock:nth-child(2) {
+    .RoadmapImgContainer {
+      // background-image: url("../../img/prizesMobile.png");
+      width: 326px;
+      height: 135px;
+      bottom: -72px;
+      left: -47px;
+      top: auto;
+      z-index: 1;
+    }
+    display: flex;
+    padding: 0;
+    min-height: 166px;
+    justify-content: flex-end;
+    &::before {
+      background-color: #fff;
+      width: 50px;
+      height: 3px;
+      bottom: auto;
+      top: -25px;
+      right: 13px;
+    }
+    .RoadmapTextContainer {
+      padding-bottom: 39px;
+      padding-left: 47px;
+      h3 {
+        margin-top: 2px;
+      }
+      p:last-child {
+        max-width: 174px;
+      }
+    }
+    .RoadmapNumb {
+      //bottom: 43px;
+      padding-right: 53px;
+      bottom: auto;
+      top: -2px;
+      span {
+        right: 19px;
+        bottom: auto;
+        top: -37px;
+        &::before {
+          height: 13px;
+          width: 13px;
+          right: -1px;
+          left: auto;
+          top: 96px;
+        }
+        &::after {
+          width: 1px;
+          height: 55px;
+          border-left: 2px dashed #f05a29;
+          left: 7px;
+          top: 33px;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  .RoadmapBlock:nth-child(3) {
+    border-width: 1px;
+    min-height: 200px;
+    padding-top: 44px;
+    padding-left: 0;
+    position: relative;
+    padding-bottom: 0;
+    &::after {
+      background-color: transparent;
+    }
+    .RoadmapTextContainer {
+      border-left: 1px solid #000000;
+      padding-left: 45px;
+      padding-top: 51px;
+      z-index: 1;
+
+      h3 {
+        max-width: 139px;
+      }
+    }
+
+    .RoadmapNumb {
+      left: -38px;
+      line-height: 100px;
+      top: auto;
+      bottom: 8px;
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        width: 3px;
+        height: 35px;
+        bottom: -15px;
+        left: 37px;
+      }
+      span {
+        left: 20px;
+        top: auto;
+        bottom: -27px;
+        z-index: 1;
+        &::after {
+          left: 40px;
+          top: 6px;
+          height: 0;
+          width: 50px;
+          border-bottom: 2px dashed #00ab88;
+          border-left: none;
+          z-index: 0;
+        }
+        &::before {
+          left: 96px;
+          top: -1px;
+          height: 13px;
+          width: 13px;
+          z-index: 0;
+        }
+      }
+    }
+    .RoadmapImgContainer img {
+      width: 300.07px;
+      height: auto;
+      position: absolute;
+      top: 79px;
+      right: -57px;
+    }
+  }
+}
+@media (max-width: 530px) {
+  .Roadmap {
+    h3,
+    p {
+      max-width: 200px !important;
+    }
+    .RoadmapBlock {
+      h3 {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .RoadmapBlock:nth-child(3) {
+    .RoadmapImgContainer img {
+      width: 192.07px;
+    }
+  }
+}
+@media (max-width: 380px) {
+  .Roadmap {
+    h3,
+    p {
+      max-width: 150px !important;
+    }
+  }
+}

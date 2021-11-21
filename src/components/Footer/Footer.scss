@@ -1,0 +1,44 @@
+
+footer.footer {
+  background-color: #fff;
+  padding: 0 50px;
+  width: 100%;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+
+  .footerContainer {
+    background: #ffffff;
+    margin: auto;
+    max-width: 1414px;
+    height: 130px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+
+    a {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  a {
+  }
+  .footerMail a {
+    color: #000;
+    float: right;
+  }
+}
+
+@media (max-width: 730px) {
+  footer.footer {
+    padding: 0 16px;
+
+    .footerContainer {
+      height: 61px;
+      img {
+        width: 50px;
+        height: 38px;
+      }
+    }
+  }
+}

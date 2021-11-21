@@ -1,0 +1,220 @@
+.Top {
+  position: relative;
+  //    width: 100%;
+  margin: 0 auto -18.65%;
+  max-width: 1920px;
+  //z-index: 1;
+  &Img {
+  }
+  &ImgLogo {
+    width: 256px;
+    height: 200px;
+  }
+  &Container1 {
+    //position: absolute;
+    //top:0;
+    //height: 100%;
+    width: 100%;
+    min-height: 313px;
+    background-position: -27px -17px;
+    // background-image: url("../../img/top.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1376px;
+    .TopContainer4 {
+      margin-top: 155px;
+      max-width: 556px;
+      h1 {
+        margin: 50px 0;
+      }
+      button {
+        margin-left: 8px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        &:hover {
+          border: none;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+      }
+
+      #cta {
+        //width:100%;
+        z-index: 1;
+        cursor: pointer;
+        position: relative;
+        width: 71px;
+        height: 65px;
+        margin-top: 68px;
+      }
+
+      #cta .arrow {
+      }
+      .arrow {
+        position: absolute;
+        bottom: 0;
+        margin-left: 0px;
+        width: 77px;
+        height: 69px;
+        background-size: contain;
+        top: 0;
+      }
+      .segunda {
+        margin-top: 23px;
+      }
+      .next {
+        // background-image: url("../../img/arrows.svg");
+        background-repeat: no-repeat;
+      }
+
+      @keyframes bounceAlpha {
+        0% {
+          opacity: 1;
+          transform: translateY(0px) scale(1);
+        }
+        25% {
+          opacity: 0;
+          transform: translateY(24px) scale(0.8);
+        }
+        26% {
+          opacity: 0;
+          transform: translateY(-24px) scale(0.8);
+        }
+        55% {
+          opacity: 1;
+          transform: translateY(0px) scale(1);
+        }
+      }
+
+      .bounceAlpha {
+        animation-name: bounceAlpha;
+        animation-duration: 1.4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      .arrow.primera.bounceAlpha {
+        animation-name: bounceAlpha;
+        animation-duration: 1.4s;
+        animation-delay: 0.2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      #cta:hover .arrow {
+        animation-name: bounceAlpha;
+        animation-duration: 1.4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      #cta:hover .arrow.primera {
+        animation-name: bounceAlpha;
+        animation-duration: 1.4s;
+        animation-delay: 0.2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+    }
+  }
+  &Container2 {
+    max-width: 1708px;
+  }
+}
+@media (max-width: 1870px) {
+  .Top {
+    margin-bottom: -22%;
+  }
+}
+@media (max-width: 1700px) {
+  .Top {
+    margin-bottom: -23%;
+  }
+}
+@media (max-width: 1700px) {
+  .Top {
+    margin-bottom: -24%;
+  }
+}
+@media (max-width: 1530px) {
+  .Top {
+    margin-bottom: -26%;
+  }
+}
+@media (max-width: 1430px) {
+  .Top {
+    margin-bottom: -28%;
+  }
+}
+@media (max-width: 1330px) {
+  .Top {
+    margin-bottom: -29.5%;
+  }
+}
+@media (max-width: 1235px) {
+  .TopContainer1 {
+    //min-width: 1250px;
+    background-size: 1250px;
+    background-position-x: 70%;
+    height: 900px;
+  }
+}
+@media (max-width: 1100px) {
+  .Top {
+    margin-bottom: -440px;
+  }
+  .TopContainer1 {
+    background-size: 1100px;
+    //height: 800px;
+  }
+}
+@media (max-width: 1000px) {
+  .Top {
+    margin-bottom: -330px;
+  }
+  .TopContainer1 {
+    background-size: 1000px;
+    height: 730px;
+  }
+}
+@media (max-width: 730px) {
+  .Top {
+    margin-bottom: 0px;
+    padding-top: 40px;
+    .TopContainer1 {
+      // background: url("../../img/topMobile.png");
+      background-size: 100%;
+
+      background-repeat: no-repeat;
+      height: 1376px;
+      padding: 0 16px;
+    }
+    #cta {
+      display: none;
+    }
+    h1 {
+      max-width: 250px;
+    }
+    button {
+      margin: 0;
+    }
+  }
+}
+@media (max-width: 414px) {
+  .Top {
+    .MuiGrid-grid-xs-6 {
+      width: 250px;
+      max-width: none;
+    }
+    .TopContainer1 .TopContainer4 button {
+      margin-left: 0;
+    }
+  }
+}
+@media (max-width: 350px) {
+  .Top {
+    .MuiGrid-grid-xs-6 {
+      flex-basis: 66%;
+    }
+    .TopContainer1 {
+      padding: 0;
+    }
+  }
+}

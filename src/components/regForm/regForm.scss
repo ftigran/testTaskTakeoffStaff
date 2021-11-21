@@ -1,0 +1,67 @@
+.regForm {
+  width: 100%;
+  .FormTextFieldContainer {
+    max-width: 570px;
+    .TextFields {
+      padding-bottom: 34px;
+      // padding-left: 10px;
+      // padding-right: 10px;
+      //box-sizing: border-box;
+    }
+  }
+  .regFormDown {
+    position: relative;
+  }
+  .WherePromocodeWrap {
+    position: absolute;
+    top: -67px;
+    align-self: flex-end;
+  }
+  .modalContainer {
+    padding-top: 17px;
+    padding-bottom: 30px;
+  }
+  .MuiFormControl-root.checkboxFormControl {
+    padding-bottom: 15px;
+    .MuiTypography-root {
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 150%;
+      a {
+        color: #000;
+        &:visited {
+          color: #000;
+        }
+      }
+    }
+    .MuiFormHelperText-root {
+      color: #f44336;
+    }
+    .MuiButtonBase-root {
+      margin-left: 0;
+      margin-right: 12px;
+    }
+  }
+}
+@media (max-width: 730px) {
+  .regForm {
+    max-width: 250px;
+    .FormTextFieldContainer {
+      max-width: none;
+      width: 100%;
+      flex-basis: 100%;
+      &:first-child {
+        .TextFields:last-child {
+          padding-bottom: 18px;
+        }
+      }
+    }
+    .regFormContainer {
+      justify-content: center;
+    }
+    .regFormApproveWrap {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
