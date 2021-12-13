@@ -1,62 +1,81 @@
-import React, { createContext, Suspense, useContext } from "react";
-import { Switch, Route, Link } from "react-router-dom";
-import useReactRouter from "use-react-router";
-import Button from "@material-ui/core/Button";
+import React, { useRef, Suspense, useState } from "react";
 import Grid from "@material-ui/core/Grid";
+import { TextField, Button } from "@material-ui/core";
+import { YMaps, Map, Clusterer, Placemark } from 'react-yandex-maps';
+import styled from 'styled-components';
 
 import "./App.scss";
 
-// import CB from "../Checkbox/Checkbox";
-// import Header from "../Header/Header";
-// import Footer from "../Footer/Footer";
 
-const Main = React.lazy(() => import("./pages/main/main"));
-const Cabinet = React.lazy(() => import("./pages/cabinet/cabinet"));
-// const Winners = React.lazy(() => import("./pages/winners/winners"));
-// const Reg = React.lazy(() => import("./pages/reg/reg"));
-
-// const DataContext = createContext();
-// import { store } from "../../store/store";
-// import { Provider, useSelector } from "react-redux";
-// import ScrollSection from "../scroll-section/scroll-section";
-// import ApplyModal from "../Modal/ApplyModal/ApplyModal";
+// const Main = React.lazy(() => import("./pages/main/main"));
 
 const App = () => {
+  const [value, setValue] = useState('')
+  const [error, setError] = useState(false)
+  const [adressList, setAdressList] = useState(['Москва', 'СПБ', 'Rostov'])
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
+
+  const keyUpHandler = (e) => {
+    console.log(!!value)
+    if (e.keyCode === 13 && !!value) {
+      setAdressList((currentState) => (currentState.concat(value)));
+      setValue('');
+    }
+  }
+  const clickHandler = (index) => () => {
+    setAdressList((currentState) => (currentState.filter((val, indexOfState) => index !== indexOfState)));
+  }
+  
   return (
     <>
-      <Grid container className="appContainer" direction="column">
-        {/* <Grid item className="appWrap">
-          <Header />
-          <Provider store={store}>
-            <ApplyModal />
-            <Routes />
-          </Provider>
-          <ScrollSection />
+      <Grid container className="appContainer">
+        <Grid item xs={4}>
+          <TextField
+            label={"Адрес"}
+            variant="outlined"
+            error={error}
+            onKeyUp={keyUpHandler}
+            value={value}
+            onChange={handleChange}
+            />
+          {adressList.map((adress, index) => (
+          <Grid container  key={index}>
+            <Grid item xs={11} >
+              {adress}
+            </Grid>
+            <Grid item xs={1}>
+              <Button fullWidth onClick={clickHandler(index)}>X</Button>
+            </Grid>
+          </Grid>
+          ))}
         </Grid>
-        <Footer /> */}
+        <Grid item xs={8}>
+          <YMaps>
+            <Map
+              defaultState={{
+                center: [55.751574, 37.573856],
+                zoom: 5,
+              }}
+            >
+              <Clusterer
+                options={{
+                  preset: 'islands#invertedVioletClusterIcons',
+                  groupByCoordinates: false,
+                }}
+              >
+                {/* {points.map((coordinates, index) => (
+                  <Placemark key={index} geometry={coordinates} />
+                ))} */}
+              </Clusterer>
+            </Map>
+          </YMaps>
+        </Grid>
       </Grid>
     </>
   );
 };
-const Routes = () => {
-  const isLogged = useSelector((state) => state.data.isLogged);
-  const { location } = useReactRouter();
 
-  return (
-    <Suspense fallback={<div id="pre-loader">Загрузка...</div>}>
-      <Switch location={location}>
-        {isLogged &&
-        <Route path={`/cabinet`} component={Cabinet} />}
-        <Route
-          key="index"
-          location={location}
-          path={"/login"}
-          component={Main}
-          exact
-        />
-        <Route path="*" component={Main} />
-      </Switch>
-    </Suspense>
-  );
-};
 export default App;
